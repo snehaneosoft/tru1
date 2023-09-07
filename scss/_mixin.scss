@@ -1,0 +1,14 @@
+@mixin typgraphy($family,$wt,$fs,$lh,$ls,$color){
+    font-family:$family;
+    font-weight:$wt;
+    font-size:$fs;
+    line-height:$lh;
+    letter-spacing:$ls;
+    color:$color
+}
+
+@mixin media-devices($propertyWid,$devicewid){
+    @media only screen and ($propertyWid:$devicewid){
+        @content
+    }
+}

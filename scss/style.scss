@@ -1,0 +1,575 @@
+@import 'fonts';
+@import 'variables';
+@import 'mixin';
+body {
+  font-size: $fs;
+}
+nav {
+  display: none;
+  .nav_ul {
+    &_li {
+      padding: 0 15px 0 0;
+      &:last-child {
+        padding-right: 0;
+      }
+      &_a {
+        @include typgraphy($systemFont, $fw500, $fs, 32px, $ls, $txtGray);
+      }
+    }
+  }
+  @include media-devices(min-width, 992px) {
+    display: block;
+  }
+}
+.header_section {
+  padding: 25px 0;
+  background: #fafafe;
+  z-index: 3;
+  &.open {
+    nav {
+      display: block;
+      position: fixed;
+      background: #fafafe;
+      right: 0;
+      width: 100%;
+      top: 58px;
+      padding: 30px 40px;
+      height: 100vh;
+      z-index: 3;
+      .nav_ul {
+        flex-direction: column;
+        &_li {
+          display: block;
+          &.active::after {
+            display: none;
+          }
+        }
+      }
+    }
+    .humberger_menu_line:nth-child(2) {
+      opacity: 0;
+    }
+    .humberger_menu_line:nth-child(1) {
+      transform: rotate(49deg);
+      position: relative;
+      top: 14px;
+    }
+    .humberger_menu_line:nth-child(3) {
+      transform: rotate(135deg);
+      top: 0;
+      position: relative;
+    }
+  }
+}
+main {
+  top: 84px;
+}
+.nextgen_sec {
+  padding: 40px 0;
+  .nextgen {
+    h1 {
+      @include typgraphy($systemFont, $fw500, $fs * 3+3, 57px, $ls, $txtBlack);
+      strong {
+        color: $secondary_color;
+      }
+      @media only screen and (min-width: 992px) {
+        padding: 0 200px 0 0;
+      }
+      @media only screen and (max-width: 767px) {
+        @include typgraphy($systemFont, $fw500, $fs * 2, 45px, $ls, $txtBlack);
+      }
+    }
+    img {
+      width: 230px;
+      margin-bottom: 38px;
+    }
+  }
+}
+.reveal_more {
+  padding-top: 80px;
+  .scroll_container {
+    width: 30px;
+    height: 48px;
+    border: 1px solid #c1c1c1;
+    border-radius: 45%;
+    padding-top: 6px;
+    img {
+      width: 14px;
+      height: 14px;
+      position: relative;
+      animation: readmore 0.7s ease-in-out infinite;
+    }
+  }
+  span {
+    @include typgraphy($systemFont, $fw500, $fs, 60px, $ls, #c1c1c1);
+    padding-left: 20px;
+  }
+}
+
+@keyframes readmore {
+  0% {
+    bottom: 0;
+  }
+  100% {
+    bottom: -10px;
+  }
+}
+.rent_rewards {
+  padding: 50px 0;
+  h2 {
+    @include typgraphy($systemFont, $fw700, $fs * 4-4, 70px, $ls, $txtBlack);
+    margin-bottom: 40px;
+    @media only screen and (min-width: 768px) {
+      @include typgraphy($systemFont, $fw700, $fs * 5-2, 100px, $ls, $txtBlack);
+      margin-bottom: 64px;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    padding: 100px 0;
+  }
+}
+.rent_rewards_row {
+  .left_bx {
+    &:last-child {
+      margin: 35px 0 25px 0;
+      @include typgraphy($systemFont, $fw500, $fs, 20px, $ls, $txtGray);
+      @media only screen and (min-width: 768px) {
+        margin: 35px 0 0 0;
+      }
+    }
+  }
+  .rent_rewards_row_topheading {
+    @include typgraphy($systemFont, $fw500, $fs, 20px, $ls, $txtGray);
+  }
+  .rent_rewards_row_desc {
+    @include typgraphy($systemFont, $fw500, $fs, 20px, $ls, $txtBlack);
+  }
+  .left_bx_span {
+    @include typgraphy($systemFont, $fw500, $fs + 1, 26px, $ls, $txtBlack);
+  }
+  .rewards_p {
+    @include typgraphy($systemFont, $fw700, $fs + 9, 32px, $ls, $txtBlack);
+    margin-bottom: 30px;
+    @media only screen and (min-width: 768px) {
+      @include typgraphy($systemFont, $fw700, $fs + 12, 36px, $ls, $txtBlack);
+      margin-bottom: 50px;
+    }
+  }
+  article {
+    margin-bottom: 30px;
+    @media only screen and (min-width: 768px) {
+      margin-bottom: 50px;
+    }
+    .card_heading {
+      @include typgraphy($systemFont, $fw700, $fs + 12, 36px, $ls, $txtBlack);
+    }
+    .crad_desc {
+      @include typgraphy($systemFont, $fw400, $fs + 2, 27px, $ls, $txtBlack);
+      margin-bottom: 50px;
+    }
+    .readless {
+      color: #3e3afe;
+      &_open {
+        width: 20px;
+        background: #3e3afe;
+        height: 3px;
+      }
+      a {
+        @include typgraphy($systemFont, $fw700, $fs, 38px, $ls, #3e3afe);
+      }
+    }
+    .top_sub_heading {
+      @include typgraphy($systemFont, $fw500, $fs + 1, 25px, $ls, #bababa);
+    }
+  }
+}
+.rent_rewards_desc {
+  @include typgraphy($systemFont, $fw500, $fs, 25px, $ls, #bababa);
+  @media only screen and (min-width: 992px) {
+    max-width: 48%;
+  }
+  // @media only screen and (min-width:768px){
+  //   margin-bottom: 0;
+  // }
+  margin-bottom: 25px;
+  max-width: 90%;
+  padding-top: 20px;
+}
+.connection_rent_player {
+  background: url(../../img/connection_rent.png) no-repeat;
+  background-size: cover;
+
+  background-position: 0;
+  @media only screen and (min-width: 768px) {
+    background-position: 50% 50%;
+  }
+  .connection_rent_wrapper {
+    padding: 80px 12px 100px 12px;
+    z-index: 2;
+    @include media-devices(min-width, 768px) {
+      padding: 129px 12px 254px 12px;
+    }
+  }
+  &_title {
+    @include typgraphy($systemFont, $fw700, $fs * 2 + 3, 40px, $ls, #fff);
+    margin-bottom: 18px;
+    @media only screen and (min-width: 768px) {
+      @include typgraphy($systemFont, $fw700, $fs * 3 - 6, 52px, $ls, #fff);
+    }
+  }
+  &_para {
+    @include typgraphy($systemFont, $fw400, $fs + 4, 32px, $ls, #fff);
+    margin: 25px 0 30px 0;
+  }
+  .ilogo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+  }
+}
+.pillar_brand {
+  padding-top: 50px;
+  @include media-devices(min-width, 768) {
+    padding-top: 72px;
+  }
+  .pillar_brand_lft_title {
+    @include typgraphy($LobstrFont, $fw700, $fs * 3 - 6, 53px, $ls, #1a1926);
+  }
+  .pillar_brand_desc {
+    @extend .rent_rewards_desc;
+    padding-top: 18px;
+  }
+  .pillar_brand_pre_title {
+    @extend .top_sub_heading;
+  }
+}
+.card_desc {
+  @include typgraphy($systemFont, $fw400, $fs + 2, 27px, $ls, #1a1926);
+}
+.identified_system_section {
+  .identified_system_h5 {
+    @include typgraphy($systemFont, $fw500, $fs + 4, 26px, $ls, #bababa);
+  }
+}
+.owl-theme .owl-dots .owl-dot.active span {
+  background: #3e3afe;
+  width: 75px;
+}
+.owl-dots {
+  margin: 20px 0 !important;
+}
+.owl-theme .owl-dots span {
+  margin: 0 7px !important;
+}
+.ijareed_section,
+.bringnowalls_section {
+  padding-top: 50px;
+  @include media-devices(min-width, 768px) {
+    padding-top: 72px;
+  }
+}
+.rentreward_img {
+  width: 105px;
+  margin: auto;
+  @media only screen and (min-width: 601px) {
+    margin: 0;
+  }
+}
+.doc_wrap_h3 {
+  @include typgraphy($systemFont, $fw700, $fs + 4, 26px, $ls, #000);
+}
+.doc_wrap_p {
+  @include typgraphy($systemFont, $fw400, $fs + 2, 26px, $ls, #000);
+}
+.renting_opt_sec {
+  &_gap {
+    @include media-devices(min-width, 601px) {
+      gap: 1%;
+    }
+  }
+  &_lt {
+    @include media-devices(min-width, 768px) {
+      width: 58%;
+    }
+    @include media-devices(max-width, 600px) {margin-bottom: 20px;}
+  }
+  &_rt {
+    @include media-devices(min-width, 768px) {
+      width: 41%;
+    }
+  }
+}
+.bringing_rent {
+  background: url(../../img/savenv.png);
+  background-size: cover;
+  background-position: 50% 50%;
+  @include media-devices(min-width, 991px) {
+    height: 490px;
+  }
+  height:400px;
+}
+.bringing_rent_title {
+  z-index: 2;
+  max-width: 450px;
+  @include media-devices(max-width, 991px) {
+    padding: 0 25px;
+  }
+}
+.overlay {
+  top: 0;
+  background: #000;
+  opacity: 0.4;
+  z-index: 1;
+}
+.allijareed {
+  @extend .bringing_rent;
+  background: url(../../img/serving.png) #000 no-repeat;
+  background-size: cover;
+  &_outer_wrap {
+    max-width: 367px;
+    &_img {
+      max-width: 246px;
+    }
+    &_para {
+      @include typgraphy($systemFont, $fw500, $fs + 3, 25px, $ls, #000);
+      background: linear-gradient(to right, #30b077, #64b134);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      padding-top: 35px;
+      @include media-devices(max-width, 991px) {
+        padding: 35px 20px 0 20px;
+      }
+    }
+  }
+}
+.autpay_section {
+  padding-top: 72px;
+}
+.payments_section {
+  background: url('../../img/serving.png') no-repeat #000;
+  background-size: cover;
+}
+.payments_section .item {
+  padding: 46px 0;
+}
+.payments_section .owl-dots {
+  position: absolute;
+  width: 100%;
+}
+.creditcard_section {
+  padding-top: 88px;
+}
+.rentingfinance_section {
+  @include media-devices(min-width, 768px) {
+    background: url('../../img/rfinance.png') no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    padding-top: 100px;
+  }
+  background: unset;
+  border: 1px solid #cdcdcd;
+  padding-top: 70px;
+
+  h2 {
+    @include typgraphy($systemFont, $fw700, $fs * 2 + 7, 53px, $ls, #000);
+  }
+  p {
+    @include typgraphy($systemFont, $fw400, $fs + 4, 30px, $ls, #000);
+  }
+  &_middle_upper {
+    @include media-devices(min-width, 768px) {
+      max-width: 57.5%;
+    }
+    max-width: 100%;
+    margin-top: 39px;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      background: url(../../img/star2.png) no-repeat;
+      background-size: cover;
+    }
+    &::before {
+      width: 26px;
+      height: 26px;
+      top: 25px;
+      left: 20px;
+    }
+    &::after {
+      width: 11px;
+      height: 11px;
+      left: 50%;
+    }
+  }
+  &_middle_bottom {
+    max-width: 100%;
+    @include media-devices(min-width, 768px) {
+      max-width: 369px;
+    }
+    &_lt {
+      top: 47px;
+      .lt_star {
+        width: 11px;
+        height: 11px;
+      }
+    }
+    &_rt {
+      right: 0;
+      .rt_star {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+  .bottom_img {
+    max-width: 57%;
+  }
+}
+.interactive_usr_section {
+  padding-top: 50px;
+  @include media-devices(min-width, 768px) {
+    padding-top: 90px;
+  }
+  .interactive_usr_lt {
+    h2 {
+      @include media-devices(min-width, 768px) {
+        text-align: left !important;
+      }
+      @include typgraphy($systemFont, $fw700, $fs * 4 - 4, 27px, $ls, #000);
+      .interactive_usr_span {
+        color: #3e3afe;
+      }
+    }
+    p {
+      @extend .rent_rewards_desc;
+      @media only screen and (min-width: 992px) {
+        max-width: 70%;
+      }
+      @include media-devices(min-width, 768px) {
+        max-width: 90%;
+      }
+      max-width: 100%;
+    }
+  }
+  .owl-dots {
+    float: left;
+  }
+}
+.enj_pay_section {
+  padding-top: 100px;
+}
+.back_relax_section {
+  background: url(../../img/gotback.png) no-repeat #000;
+  background-size: cover;
+  h2 {
+    @include typgraphy($systemFont, $fw700, $fs * 3 + 2, 60px, $ls, #3c3c3c);
+    @include media-devices(min-width, 768px) {
+      max-width: 90%;
+      @include typgraphy($systemFont, $fw700, $fs * 6 + 4, 96px, $ls, #3c3c3c);
+    }
+
+    strong {
+      color: $secondary_color;
+    }
+  }
+  &_container {
+    background: url(../../img/starbg.png) no-repeat;
+    background-size: 100% 100%;
+  }
+  &_wrapper {
+    padding: 41px 0 57px 0;
+  }
+}
+.mob_container {
+  max-width: 280px;
+  display: block;
+  margin: 41px auto 32px auto;
+}
+.details_bg {
+  background: url('../../img/bg.png') no-repeat;
+  background-size: cover;
+  z-index: 2;
+  .details_bx_container {
+    padding: 50px 0 0 0;
+    @media only screen and (min-width: 768px) {
+      padding: 80px 0 0 0;
+    }
+  }
+  .on-top {
+    z-index: 2;
+  }
+  &_container {
+    width: 55px;
+    @media only screen and (min-width: 768px) {
+      width: 57px;
+    }
+    h5 {
+      @include typgraphy($LobstrFont, $fw700, $fs * 3-3, 53px, $ls, #fff);
+      @media only screen and (min-width: 768px) {
+        @include typgraphy($LobstrFont, $fw700, $fs * 3 +5, 53px, $ls, #fff);
+      }
+    }
+  }
+  .details_bg_wrapper_middle {
+    padding: 50px 0 50px 0;
+    gap: 20px;
+    .mob_img_wrap {
+      width: 20.94%;
+    }
+    .desk_img_wrap {
+      width: 57.4%;
+    }
+    @media only screen and (min-width: 768px) {
+      padding: 78px 0 65px 0;
+    }
+  }
+}
+.nav_ul_li.active {
+  position: relative;
+  a {
+    color: #000;
+  }
+  &::after {
+    content: '';
+    background: url(../../img/star2.png);
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    background-size: cover;
+    left: 0;
+    right: 15px;
+    margin: 0 auto;
+    display: block;
+  }
+}
+.landlord_sec {
+  padding: 16px 0 66px 0;
+}
+.paperless_sec {
+  background: url('../../img/paperless.png') no-repeat;
+  background-size: cover;
+  margin-bottom: 10px;
+  @media only screen and (min-width: 992px) {
+    height: 768px;
+    background-size: 100% 100%;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    height: 450px;
+  }
+  @media only screen and (max-width: 600px) {
+    height: 200px;
+  }
+}
+.g_flow {
+  max-width: 800px;
+  margin: auto;
+}
+.humberger_menu {
+  &_line {
+    width: 25px;
+    height: 3px;
+    background: blue;
+    margin: 2px 0;
+  }
+}

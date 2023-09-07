@@ -1,0 +1,824 @@
+@font-face {
+  font-family: "Lobster Two";
+  src: url("../../fonts/LobsterTwo.woff2") format("woff2"), url("../../fonts/LobsterTwo.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font-size: 16px;
+}
+
+nav {
+  display: none;
+}
+nav .nav_ul_li {
+  padding: 0 15px 0 0;
+}
+nav .nav_ul_li:last-child {
+  padding-right: 0;
+}
+nav .nav_ul_li_a {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: 0.03px;
+  color: #A1A1B5;
+}
+@media only screen and (min-width: 992px) {
+  nav {
+    display: block;
+  }
+}
+
+.header_section {
+  padding: 25px 0;
+  background: #fafafe;
+  z-index: 3;
+}
+.header_section.open nav {
+  display: block;
+  position: fixed;
+  background: #fafafe;
+  right: 0;
+  width: 100%;
+  top: 58px;
+  padding: 30px 40px;
+  height: 100vh;
+  z-index: 3;
+}
+.header_section.open nav .nav_ul {
+  flex-direction: column;
+}
+.header_section.open nav .nav_ul_li {
+  display: block;
+}
+.header_section.open nav .nav_ul_li.active::after {
+  display: none;
+}
+.header_section.open .humberger_menu_line:nth-child(2) {
+  opacity: 0;
+}
+.header_section.open .humberger_menu_line:nth-child(1) {
+  transform: rotate(49deg);
+  position: relative;
+  top: 14px;
+}
+.header_section.open .humberger_menu_line:nth-child(3) {
+  transform: rotate(135deg);
+  top: 0;
+  position: relative;
+}
+
+main {
+  top: 84px;
+}
+
+.nextgen_sec {
+  padding: 40px 0;
+}
+.nextgen_sec .nextgen h1 {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 500;
+  font-size: 51px;
+  line-height: 57px;
+  letter-spacing: 0.03px;
+  color: #1A1926;
+}
+.nextgen_sec .nextgen h1 strong {
+  color: #3e3afe;
+}
+@media only screen and (min-width: 992px) {
+  .nextgen_sec .nextgen h1 {
+    padding: 0 200px 0 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .nextgen_sec .nextgen h1 {
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 45px;
+    letter-spacing: 0.03px;
+    color: #1A1926;
+  }
+}
+.nextgen_sec .nextgen img {
+  width: 230px;
+  margin-bottom: 38px;
+}
+
+.reveal_more {
+  padding-top: 80px;
+}
+.reveal_more .scroll_container {
+  width: 30px;
+  height: 48px;
+  border: 1px solid #c1c1c1;
+  border-radius: 45%;
+  padding-top: 6px;
+}
+.reveal_more .scroll_container img {
+  width: 14px;
+  height: 14px;
+  position: relative;
+  animation: readmore 0.7s ease-in-out infinite;
+}
+.reveal_more span {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 60px;
+  letter-spacing: 0.03px;
+  color: #c1c1c1;
+  padding-left: 20px;
+}
+
+@keyframes readmore {
+  0% {
+    bottom: 0;
+  }
+  100% {
+    bottom: -10px;
+  }
+}
+.rent_rewards {
+  padding: 50px 0;
+}
+.rent_rewards h2 {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 70px;
+  letter-spacing: 0.03px;
+  color: #1A1926;
+  margin-bottom: 40px;
+}
+@media only screen and (min-width: 768px) {
+  .rent_rewards h2 {
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 700;
+    font-size: 78px;
+    line-height: 100px;
+    letter-spacing: 0.03px;
+    color: #1A1926;
+    margin-bottom: 64px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .rent_rewards {
+    padding: 100px 0;
+  }
+}
+
+.rent_rewards_row .left_bx:last-child {
+  margin: 35px 0 25px 0;
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.03px;
+  color: #A1A1B5;
+}
+@media only screen and (min-width: 768px) {
+  .rent_rewards_row .left_bx:last-child {
+    margin: 35px 0 0 0;
+  }
+}
+.rent_rewards_row .rent_rewards_row_topheading {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.03px;
+  color: #A1A1B5;
+}
+.rent_rewards_row .rent_rewards_row_desc {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.03px;
+  color: #1A1926;
+}
+.rent_rewards_row .left_bx_span {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 26px;
+  letter-spacing: 0.03px;
+  color: #1A1926;
+}
+.rent_rewards_row .rewards_p {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 32px;
+  letter-spacing: 0.03px;
+  color: #1A1926;
+  margin-bottom: 30px;
+}
+@media only screen and (min-width: 768px) {
+  .rent_rewards_row .rewards_p {
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: 0.03px;
+    color: #1A1926;
+    margin-bottom: 50px;
+  }
+}
+.rent_rewards_row article {
+  margin-bottom: 30px;
+}
+@media only screen and (min-width: 768px) {
+  .rent_rewards_row article {
+    margin-bottom: 50px;
+  }
+}
+.rent_rewards_row article .card_heading {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: 0.03px;
+  color: #1A1926;
+}
+.rent_rewards_row article .crad_desc {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0.03px;
+  color: #1A1926;
+  margin-bottom: 50px;
+}
+.rent_rewards_row article .readless {
+  color: #3e3afe;
+}
+.rent_rewards_row article .readless_open {
+  width: 20px;
+  background: #3e3afe;
+  height: 3px;
+}
+.rent_rewards_row article .readless a {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 38px;
+  letter-spacing: 0.03px;
+  color: #3e3afe;
+}
+.rent_rewards_row article .top_sub_heading, .rent_rewards_row article .pillar_brand .pillar_brand_pre_title, .pillar_brand .rent_rewards_row article .pillar_brand_pre_title {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 25px;
+  letter-spacing: 0.03px;
+  color: #bababa;
+}
+
+.rent_rewards_desc, .interactive_usr_section .interactive_usr_lt p, .pillar_brand .pillar_brand_desc {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.03px;
+  color: #bababa;
+  margin-bottom: 25px;
+  max-width: 90%;
+  padding-top: 20px;
+}
+@media only screen and (min-width: 992px) {
+  .rent_rewards_desc, .interactive_usr_section .interactive_usr_lt p, .pillar_brand .pillar_brand_desc {
+    max-width: 48%;
+  }
+}
+
+.connection_rent_player {
+  background: url(../../img/connection_rent.png) no-repeat;
+  background-size: cover;
+  background-position: 0;
+}
+@media only screen and (min-width: 768px) {
+  .connection_rent_player {
+    background-position: 50% 50%;
+  }
+}
+.connection_rent_player .connection_rent_wrapper {
+  padding: 80px 12px 100px 12px;
+  z-index: 2;
+}
+@media only screen and (min-width: 768px) {
+  .connection_rent_player .connection_rent_wrapper {
+    padding: 129px 12px 254px 12px;
+  }
+}
+.connection_rent_player_title {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 40px;
+  letter-spacing: 0.03px;
+  color: #fff;
+  margin-bottom: 18px;
+}
+@media only screen and (min-width: 768px) {
+  .connection_rent_player_title {
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 52px;
+    letter-spacing: 0.03px;
+    color: #fff;
+  }
+}
+.connection_rent_player_para {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 0.03px;
+  color: #fff;
+  margin: 25px 0 30px 0;
+}
+.connection_rent_player .ilogo {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.pillar_brand {
+  padding-top: 50px;
+}
+@media only screen and (min-width: 768) {
+  .pillar_brand {
+    padding-top: 72px;
+  }
+}
+.pillar_brand .pillar_brand_lft_title {
+  font-family: "Lobster Two";
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 53px;
+  letter-spacing: 0.03px;
+  color: #1a1926;
+}
+.pillar_brand .pillar_brand_desc {
+  padding-top: 18px;
+}
+.card_desc {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0.03px;
+  color: #1a1926;
+}
+
+.identified_system_section .identified_system_h5 {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 0.03px;
+  color: #bababa;
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+  background: #3e3afe;
+  width: 75px;
+}
+
+.owl-dots {
+  margin: 20px 0 !important;
+}
+
+.owl-theme .owl-dots span {
+  margin: 0 7px !important;
+}
+
+.ijareed_section,
+.bringnowalls_section {
+  padding-top: 50px;
+}
+@media only screen and (min-width: 768px) {
+  .ijareed_section,
+  .bringnowalls_section {
+    padding-top: 72px;
+  }
+}
+
+.rentreward_img {
+  width: 105px;
+  margin: auto;
+}
+@media only screen and (min-width: 601px) {
+  .rentreward_img {
+    margin: 0;
+  }
+}
+
+.doc_wrap_h3 {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 0.03px;
+  color: #000;
+}
+
+.doc_wrap_p {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0.03px;
+  color: #000;
+}
+
+@media only screen and (min-width: 601px) {
+  .renting_opt_sec_gap {
+    gap: 1%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .renting_opt_sec_lt {
+    width: 58%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .renting_opt_sec_lt {
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .renting_opt_sec_rt {
+    width: 41%;
+  }
+}
+
+.bringing_rent, .allijareed {
+  background: url(../../img/savenv.png);
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 400px;
+}
+@media only screen and (min-width: 991px) {
+  .bringing_rent, .allijareed {
+    height: 490px;
+  }
+}
+
+.bringing_rent_title {
+  z-index: 2;
+  max-width: 450px;
+}
+@media only screen and (max-width: 991px) {
+  .bringing_rent_title {
+    padding: 0 25px;
+  }
+}
+
+.overlay {
+  top: 0;
+  background: #000;
+  opacity: 0.4;
+  z-index: 1;
+}
+
+.allijareed {
+  background: url(../../img/serving.png) #000 no-repeat;
+  background-size: cover;
+}
+.allijareed_outer_wrap {
+  max-width: 367px;
+}
+.allijareed_outer_wrap_img {
+  max-width: 246px;
+}
+.allijareed_outer_wrap_para {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 25px;
+  letter-spacing: 0.03px;
+  color: #000;
+  background: linear-gradient(to right, #30b077, #64b134);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  padding-top: 35px;
+}
+@media only screen and (max-width: 991px) {
+  .allijareed_outer_wrap_para {
+    padding: 35px 20px 0 20px;
+  }
+}
+
+.autpay_section {
+  padding-top: 72px;
+}
+
+.payments_section {
+  background: url("../../img/serving.png") no-repeat #000;
+  background-size: cover;
+}
+
+.payments_section .item {
+  padding: 46px 0;
+}
+
+.payments_section .owl-dots {
+  position: absolute;
+  width: 100%;
+}
+
+.creditcard_section {
+  padding-top: 88px;
+}
+
+.rentingfinance_section {
+  background: unset;
+  border: 1px solid #cdcdcd;
+  padding-top: 70px;
+}
+@media only screen and (min-width: 768px) {
+  .rentingfinance_section {
+    background: url("../../img/rfinance.png") no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    padding-top: 100px;
+  }
+}
+.rentingfinance_section h2 {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 700;
+  font-size: 39px;
+  line-height: 53px;
+  letter-spacing: 0.03px;
+  color: #000;
+}
+.rentingfinance_section p {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.03px;
+  color: #000;
+}
+.rentingfinance_section_middle_upper {
+  max-width: 100%;
+  margin-top: 39px;
+}
+@media only screen and (min-width: 768px) {
+  .rentingfinance_section_middle_upper {
+    max-width: 57.5%;
+  }
+}
+.rentingfinance_section_middle_upper::before, .rentingfinance_section_middle_upper::after {
+  content: "";
+  position: absolute;
+  background: url(../../img/star2.png) no-repeat;
+  background-size: cover;
+}
+.rentingfinance_section_middle_upper::before {
+  width: 26px;
+  height: 26px;
+  top: 25px;
+  left: 20px;
+}
+.rentingfinance_section_middle_upper::after {
+  width: 11px;
+  height: 11px;
+  left: 50%;
+}
+.rentingfinance_section_middle_bottom {
+  max-width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .rentingfinance_section_middle_bottom {
+    max-width: 369px;
+  }
+}
+.rentingfinance_section_middle_bottom_lt {
+  top: 47px;
+}
+.rentingfinance_section_middle_bottom_lt .lt_star {
+  width: 11px;
+  height: 11px;
+}
+.rentingfinance_section_middle_bottom_rt {
+  right: 0;
+}
+.rentingfinance_section_middle_bottom_rt .rt_star {
+  width: 18px;
+  height: 18px;
+}
+.rentingfinance_section .bottom_img {
+  max-width: 57%;
+}
+
+.interactive_usr_section {
+  padding-top: 50px;
+}
+@media only screen and (min-width: 768px) {
+  .interactive_usr_section {
+    padding-top: 90px;
+  }
+}
+.interactive_usr_section .interactive_usr_lt h2 {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 27px;
+  letter-spacing: 0.03px;
+  color: #000;
+}
+@media only screen and (min-width: 768px) {
+  .interactive_usr_section .interactive_usr_lt h2 {
+    text-align: left !important;
+  }
+}
+.interactive_usr_section .interactive_usr_lt h2 .interactive_usr_span {
+  color: #3e3afe;
+}
+.interactive_usr_section .interactive_usr_lt p {
+  max-width: 100%;
+}
+@media only screen and (min-width: 992px) {
+  .interactive_usr_section .interactive_usr_lt p {
+    max-width: 70%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .interactive_usr_section .interactive_usr_lt p {
+    max-width: 90%;
+  }
+}
+.interactive_usr_section .owl-dots {
+  float: left;
+}
+
+.enj_pay_section {
+  padding-top: 100px;
+}
+
+.back_relax_section {
+  background: url(../../img/gotback.png) no-repeat #000;
+  background-size: cover;
+}
+.back_relax_section h2 {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 60px;
+  letter-spacing: 0.03px;
+  color: #3c3c3c;
+}
+@media only screen and (min-width: 768px) {
+  .back_relax_section h2 {
+    max-width: 90%;
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 96px;
+    letter-spacing: 0.03px;
+    color: #3c3c3c;
+  }
+}
+.back_relax_section h2 strong {
+  color: #3e3afe;
+}
+.back_relax_section_container {
+  background: url(../../img/starbg.png) no-repeat;
+  background-size: 100% 100%;
+}
+.back_relax_section_wrapper {
+  padding: 41px 0 57px 0;
+}
+
+.mob_container {
+  max-width: 280px;
+  display: block;
+  margin: 41px auto 32px auto;
+}
+
+.details_bg {
+  background: url("../../img/bg.png") no-repeat;
+  background-size: cover;
+  z-index: 2;
+}
+.details_bg .details_bx_container {
+  padding: 50px 0 0 0;
+}
+@media only screen and (min-width: 768px) {
+  .details_bg .details_bx_container {
+    padding: 80px 0 0 0;
+  }
+}
+.details_bg .on-top {
+  z-index: 2;
+}
+.details_bg_container {
+  width: 55px;
+}
+@media only screen and (min-width: 768px) {
+  .details_bg_container {
+    width: 57px;
+  }
+}
+.details_bg_container h5 {
+  font-family: "Lobster Two";
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 53px;
+  letter-spacing: 0.03px;
+  color: #fff;
+}
+@media only screen and (min-width: 768px) {
+  .details_bg_container h5 {
+    font-family: "Lobster Two";
+    font-weight: 700;
+    font-size: 53px;
+    line-height: 53px;
+    letter-spacing: 0.03px;
+    color: #fff;
+  }
+}
+.details_bg .details_bg_wrapper_middle {
+  padding: 50px 0 50px 0;
+  gap: 20px;
+}
+.details_bg .details_bg_wrapper_middle .mob_img_wrap {
+  width: 20.94%;
+}
+.details_bg .details_bg_wrapper_middle .desk_img_wrap {
+  width: 57.4%;
+}
+@media only screen and (min-width: 768px) {
+  .details_bg .details_bg_wrapper_middle {
+    padding: 78px 0 65px 0;
+  }
+}
+
+.nav_ul_li.active {
+  position: relative;
+}
+.nav_ul_li.active a {
+  color: #000;
+}
+.nav_ul_li.active::after {
+  content: "";
+  background: url(../../img/star2.png);
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  background-size: cover;
+  left: 0;
+  right: 15px;
+  margin: 0 auto;
+  display: block;
+}
+
+.landlord_sec {
+  padding: 16px 0 66px 0;
+}
+
+.paperless_sec {
+  background: url("../../img/paperless.png") no-repeat;
+  background-size: cover;
+  margin-bottom: 10px;
+}
+@media only screen and (min-width: 992px) {
+  .paperless_sec {
+    height: 768px;
+    background-size: 100% 100%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .paperless_sec {
+    height: 450px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .paperless_sec {
+    height: 200px;
+  }
+}
+
+.g_flow {
+  max-width: 800px;
+  margin: auto;
+}
+
+.humberger_menu_line {
+  width: 25px;
+  height: 3px;
+  background: blue;
+  margin: 2px 0;
+}
+
+/*# sourceMappingURL=style.css.map */
